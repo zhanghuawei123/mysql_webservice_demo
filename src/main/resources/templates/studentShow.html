@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <table th:cellpadding="1" th:cellspacing="1" border="1">
+       <tr>
+           <td>编号</td>
+           <td>姓名</td>
+           <td>密码</td>
+           <td>年龄</td>
+       </tr>
+       <tr th:each="stu:${studentList}">
+           <td th:text="${stu.id}"></td>
+           <td th:text="${stu.name}"></td>
+           <td th:text="${stu.password}"></td>
+           <td th:text="${stu.age}"></td>
+       </tr>
+   </table>
+</body>
+</html>
